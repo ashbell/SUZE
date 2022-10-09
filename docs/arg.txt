@@ -1,0 +1,45 @@
+#创建对象
+parse=argparse.ArgumentParser(description='PyTorch MNIST Example')
+add_argument可添加的参数类型：
+1.positional arguments（位置参数/定位参数）
+
+用法是不用带-就可用
+
+parser.add_argument("echo") #　默认必选
+args = parser.parse_args()
+print(args.echo)
+执行python prog.py hahahaha
+
+输出：hahahaha
+
+2.optional arguments（可选参数）
+
+有两种方式：
+
+方式一、通过一个-来指定的短参数，如-h
+
+方式二、通过–来指定的长参数，如- -help
+
+
+
+3.add_argument()中的可选参数：
+
+‘--batch-size’或’-b’：长参数或者短参数
+
+type：参数的类型
+
+default：参数默认值
+
+help=”帮助信息”：执行python prog.py -h，会在参数的后面打印出该信息
+
+choices:这个参数用来检查输入参数的范围。如：choices=[1,3,5]
+
+metavar：这个参数用于help 信息输出中
+
+nargs:当选项后接受多个或者0个参数时需要这个来指定。
+
+nargs='*' ：表示参数可设置零个或多个
+
+nargs= '+' ：表示参数可设置一个或多个
+
+nargs='?'：表示参数可设置零个或一个

@@ -1,0 +1,8 @@
+ ffmpeg.exe  -i ./aa.mp4  -vf  scale=720:ih*1.15 -preset slow  -crf 18   bbb.mp4
+
+ffmpeg -i ./bbb.mp4  -vf  crop=720:1280:0:96 -preset slow -crf 18 ccc.mp4
+
+https://juejin.cn/post/6844904122328547335
+https://blog.csdn.net/qq_42667481/article/details/105522020
+
+round(c,3)

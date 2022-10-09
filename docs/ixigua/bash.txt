@@ -1,0 +1,3 @@
+ffmpeg.exe    -i  ./001.mp4  -i   ./001.mp4a  -vcodec copy  -acodec copy  new.mp4
+
+ for i in `find .   -name   \* |grep mp4a$`; do src=`echo $i | sed 's/mp4a/mp4/g'`; echo mv -v  $src  ../del/; echo mv  -v $i  ../del/; done;

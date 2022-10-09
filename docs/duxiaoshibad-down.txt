@@ -1,0 +1,1 @@
+grep -L  -irn 'window._page_data' ./*  | sed  's/\.//g'   |xargs -I {}  echo 'https://quanmin.baidu.com/v'{} |xargs -I  {} wget  {}
