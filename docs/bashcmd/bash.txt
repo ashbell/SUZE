@@ -1,0 +1,7 @@
+cat proc_file  |  grep  '\-\-' | sed 's/^\-\-//g'  | sort -u >> userid
+
+ n=40; for i in `ls`; do new=`printf %03d $n`; mv -vn $i $new.mp4; let n=n+1; done;
+
+for i in `grep  "\->" ./_OCR.ocr   | sed 's/:\ /^/g' | cut -d '^' -f 1  `; do mv -vn $i  ./has/; done;
+
+

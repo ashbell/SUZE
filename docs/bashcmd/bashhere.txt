@@ -1,0 +1,7 @@
+
+"C:\cygwin64\bin\mintty.exe /bin/sh -e /bin/xhere /bin/bash.exe"
+C:\cygwin64\bin\mintty.exe /bin/sh -lc 'cd `cygpath "%V"`; bash'
+
+continue download:
+
+ n=1342; for  i in `cat ./video_url | sed  -n '1342,$p'`; do wget -O ./video/$n.mp4 $i; let n=n+1; done;
